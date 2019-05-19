@@ -21,7 +21,9 @@ class Application
           resp.write "#{x}\n"
         end
     elsif req.path.match(/add/)
-      get.param[:item]
+      item = get.param[:item]
+      if @@item.include?(item)
+
     else
       resp.write "Path Not Found"
     end
