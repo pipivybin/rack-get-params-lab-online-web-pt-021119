@@ -24,6 +24,8 @@ class Application
       item = get.param[:item]
       if @@item.include?(item)
         @@cart << item
+        resp.write "We just added #{item}"
+      else resp.write "We don't have that item"
 
     else
       resp.write "Path Not Found"
