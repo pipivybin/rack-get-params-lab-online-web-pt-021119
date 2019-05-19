@@ -18,7 +18,7 @@ class Application
         if @@cart.empty?
           resp.write "Your cart is empty"
         else @@cart.each do |x|
-          resp.write "#{x}"
+          resp.write "#{x}\n"
         end
     else
       resp.write "Path Not Found"
