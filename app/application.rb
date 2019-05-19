@@ -22,7 +22,7 @@ class Application
         end
         end
     elsif req.path.match(/add/)
-      item = get.param[:item]
+      item = gets.param[:item]
       if @@item.include?(item)
         @@cart << item
         resp.write "We just added #{item}"
