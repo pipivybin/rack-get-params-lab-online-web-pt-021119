@@ -20,6 +20,8 @@ class Application
         else @@cart.each do |x|
           resp.write "#{x}\n"
         end
+    elsif req.path.match(/add/)
+      
     else
       resp.write "Path Not Found"
     end
