@@ -20,6 +20,7 @@ class Application
         else @@cart.each do |x|
           resp.write "#{x}\n"
         end
+      end
     elsif req.path.match(/add/)
       item = get.param[:item]
       if @@item.include?(item)
